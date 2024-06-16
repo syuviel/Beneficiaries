@@ -1,13 +1,14 @@
-package com.example.beneficiaries
+package com.example.beneficiaries.Adapter
 
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.beneficiaries.Model.BeneficiariesItem
+import com.example.beneficiaries.view.BeneficiariesRecyclerview
 
 private const val CONTINGENT = "Contingent"
 private const val PRIMARY = "Primary"
-
 class BeneficiariesAdapter(
     private val beneficiaryList: List<BeneficiariesItem>
 ) : RecyclerView.Adapter<BeneficiariesAdapter.ViewHolder>() {
@@ -25,6 +26,8 @@ class BeneficiariesAdapter(
     interface OnItemClick {
         fun onItemClick(position: Int, beneficiary: BeneficiariesItem)
     }
+
+
 
 
     override fun onCreateViewHolder(
@@ -54,5 +57,9 @@ class BeneficiariesAdapter(
 
     override fun getItemCount(): Int {
         return beneficiaryList.size
+    }
+
+    fun setClickListener(onClickListener: OnItemClick) {
+        onClick = onClickListener
     }
 }

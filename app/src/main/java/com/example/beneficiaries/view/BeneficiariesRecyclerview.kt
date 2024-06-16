@@ -1,10 +1,11 @@
-package com.example.beneficiaries
+package com.example.beneficiaries.view
 
 import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.graphics.drawable.toDrawable
+import com.example.beneficiaries.R
 
 class BeneficiariesRecyclerview(context: Context): LinearLayout(context)  {
 

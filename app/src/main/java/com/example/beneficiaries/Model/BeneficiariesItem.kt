@@ -1,5 +1,9 @@
-package com.example.beneficiaries
+package com.example.beneficiaries.Model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class BeneficiariesItem(
    val lastName: String = "",
    val firstName: String = "",
@@ -10,4 +14,5 @@ data class BeneficiariesItem(
    val middleName: String = "",
    val phoneNumber: String = "",
    val beneficiaryAddress: BeneficiaryAddress? = null
-)
+): Parcelable
+

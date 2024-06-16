@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    apply plugin: 'kotlin-parcelize'
     implementation("com.google.code.gson:gson:2.8.9")
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.core:core-ktx:1.7.0'
